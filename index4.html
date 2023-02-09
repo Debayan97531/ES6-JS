@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lec -> 16,</h1>
+
+    
+</body>
+<script>
+    //object instance of a class
+    //object -> property   &   method
+
+    //inheritance ->  sharing property to child class
+
+    //class is like function but class word is used instead of function
+
+    class students{
+        constructor(name,age,cls){//to create properties
+            this.myname=name;
+            this.myage=age;
+            this.mycls=cls;
+
+        }
+         //instance method   ..if this is static then can't access by child class
+        biodata(){
+            console.log(`Hi I'm a class method...
+            I'm ${this.myname}.I'm ${this.myage} years old.
+            My class is ${this.mycls}.`);
+        }
+
+    }
+
+
+    class Player extends students{
+        constructor(name,age,cls,game){
+            super(name,age,cls);
+            this.mygame=game;
+        }
+        /* biodata2(){
+            console.log(`Hi I'm a class method...
+            I'm ${this.myname}.I'm ${this.myage} years old.
+            My class is ${this.mycls}.I'm layer of ${this.mygame}..`);
+        } */
+
+        biodata2(){
+            return `${super.biodata()}I'm player of ${this.mygame}.`;
+        }
+    }
+
+
+
+
+    let obj1=new students('vinod',26,'MCS');
+    let obj2=new students('Debayan',21,'Btech');
+    let obj3=new Player('Anil',24,'Mtech','Cricket');
+    obj1.biodata();
+    obj2.biodata(); 
+    console.log(obj3.biodata2());
+    console.log(obj1);
+
+
+</script>
+</html>

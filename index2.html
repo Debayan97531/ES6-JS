@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lec -> 7,8,9,10</h1>
+</body>
+
+<script>
+     //Object destructuring
+    const bioData={
+        name:'Vinod',
+        age:22,
+        deg:'MCS',
+        hobby:{     //object under object
+            first:'exercise',
+            sec:'youtube'  
+        }
+    }
+    let {name:myname,deg,age,hobby}=bioData;//give same variable
+    console.log(`his name is ${bioData.name}`);
+
+    console.log(`my mentor is ${myname} and age is ${age}.My fav hobby is 
+    ${hobby.first}`);
+
+
+
+    //fat arrow
+    let a=25;
+    let b=15;
+    const sum1 = () =>{
+        
+        return a+b;
+
+    }
+
+    console.log(sum1());
+
+
+
+    //default parameters
+    //es5
+    function mult1(x,y){
+        console.log(x*y);
+    }
+    mult1(4);
+    
+    const mult2 = (c,e=2,d=8) =>{//a ->default parameter
+        console.log(`multiplication is ${c*d*e}`);
+    }
+    mult2(3);//argument
+
+
+
+
+
+    //rest parameters
+
+    //es5
+    function sum3(a,b){
+        console.log(a+b);
+    }
+    sum3(12,3,5,6,7);
+
+
+    //indefinite no of arguments as an array
+    function sum4(...inputs){
+        console.log(inputs);
+        console.log(...inputs);
+
+        let total=0;
+        for(let i of inputs)
+        {
+            total+=i;
+        }
+        console.log(total);
+    }
+    sum4(12,3,5,6,7);
+
+
+
+    const fun = (a,b,...c) =>{
+        console.log(`${a} ${b}`);//CR7    Messi
+        console.log(c);//(4) ['Neymar', 'Mbappe', 'Lewan', 'Edan']
+        console.log(c[0]);//Neymar
+        console.log(c.length);//4
+        console.log(c.indexOf('Edan'));//3
+    }
+    fun('CR7','Messi','Neymar','Mbappe','Lewan','Edan');
+</script>
+</html>

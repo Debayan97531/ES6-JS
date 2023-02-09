@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lec _> 2,3,4,5,6</h1>
+</body>
+
+<script>
+
+    //Lec-> 2,3,4,5,6
+
+
+
+
+    <!-- Template Literal -->
+    let firstName="vinod"
+    let lastName="thapa"
+
+    console.log(`My name is ${firstName}.Ans surname is ${lastName}.`)
+
+
+    let a=20;
+    let b=40;
+    console.log(`sum is ${a+b} not \n${a*b}`)
+
+
+    <!-- Template String -->
+
+    console.log(`${firstName}`)//object
+
+    let myName="Debayan Kumar Ghosh"
+    let fname=`${myName}`
+
+    console.log(`${myName}`.endsWith('V'));
+    console.log(`${myName}`.startsWith('D'));
+    console.log(`${myName}`.includes('ayan'));
+    console.log(`${myName}  `.repeat(5));
+    console.log(`${fname}\n`.repeat(2))
+
+
+    <!-- Array Destructuring -->
+    const myLang=['js','php','c','ruby'];
+
+    let top1=myLang[0];
+    let top2=myLang[2];
+    let top3=myLang[3];
+
+    console.log('My fav lang is '+top2);
+
+
+    let [t1,t2,t3]=myLang;//destructing
+    console.log(`My fav coing lang ${t1}`); 
+
+    let to1,to5;
+    [to1,,,to4]=myLang;
+    console.log(`My fav1 lang is ${to1} and my fav5 lang is ${to4}`);
+
+
+    // Exercise 1 
+    
+   let a1=12;
+   let a2=10;
+   [a1,a2]=[a2,a1];
+   console.log(`swapped value ${a1} and ${a2}`);
+    
+
+    
+
+
+
+
+
+
+</script>
+</html>
